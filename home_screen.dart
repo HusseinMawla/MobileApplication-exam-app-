@@ -24,11 +24,6 @@ class _HomeScreenState extends State<HomeScreen> {
       title: 'What is 10 + 20?',
       options: {'5': false, '30': true, '4': false, '10': false},
     ),
-     Question(
-      id: '13',
-      title: 'What is 20 + 20?',
-      options: {'5': false, '30': false, '40': true, '10': false},
-    ),
   ];
   int index = 0;
   int score = 0;
@@ -42,6 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
         builder: (ctx) => ResultBox(
           result: score,
           questionLength: _questions.length,
+
         ),
       );
     } else {
@@ -159,12 +155,8 @@ class _HomeScreenState extends State<HomeScreen> {
               nextQuestion: nextQuestion,
             ),
           ),
-          const SizedBox(height: 16.0),
-          FloatingActionButton.extended(
-            onPressed: resetExam,
-            label: const Text('Reset Exam'),
-            icon: const Icon(Icons.refresh),
-          ),
+
+          
         ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
