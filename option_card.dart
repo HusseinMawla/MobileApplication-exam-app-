@@ -15,6 +15,18 @@ class OptionCard extends StatelessWidget {
   Widget build(BuildContext context) {
     Color textColor = color.red != color.green ? neutral : Colors.black;
 
-    return Card();
+    return Card(
+      color: color,
+      child: ListTile(
+        title: Text(
+          option,
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 22.0,
+            color: textColor,
+          ),
+        ),
+      ),
+    );
   }
 }
