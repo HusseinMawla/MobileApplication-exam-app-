@@ -24,6 +24,11 @@ class _HomeScreenState extends State<HomeScreen> {
       title: 'What is 10 + 20?',
       options: {'5': false, '30': true, '4': false, '10': false},
     ),
+     Question(
+      id: '13',
+      title: 'What is 20 + 20?',
+      options: {'5': false, '30': false, '40': true, '10': false},
+    ),
   ];
   int index = 0;
   int score = 0;
