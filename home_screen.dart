@@ -16,14 +16,56 @@ class _HomeScreenState extends State<HomeScreen> {
   List<Question> _questions = [
     Question(
       id: '10',
-      title: 'What is 2 + 2?',
-      options: {'5': false, '30': false, '4': true, '10': false},
+      title: ' What does HTML stand for?',
+      options: {'Hyper Text Markup Language': true, 'Hyperlinks and Text Markup Language': false, 'Home Tool Markup Language': false, 'Hyper Text Makeup Language': false},
     ),
     Question(
       id: '11',
-      title: 'What is 10 + 20?',
-      options: {'5': false, '30': true, '4': false, '10': false},
+      title: 'Which of the following is not a fundamental data type in programming?',
+      options: {'Integer': false, 'Array': true, ' Boolean': false, 'String': false},
     ),
+
+    Question(
+      id: '13',
+      title: 'What is the full form of CSS in web development?',
+      options: {'Creative Style Sheets': false, 'Cascading Style Sheets': true, 'Computer Style Sheets': false, 'Colorful Style Sheets': false},
+    ),
+    Question(
+      id: '14',
+      title: 'What is the purpose of the "if-else" statement in programming?',
+      options: {'To loop through code': false, 'To perform arithmetic operations': true, 'To define a class': false, 'To make decisions based on conditions': false},
+    ),
+    Question(
+      id: '15',
+      title: 'Which data structure uses Last In, First Out (LIFO) approach?',
+      options: {'Queue': false, 'Stack': true, 'Linked List': false, 'Array': false},
+    ),
+    Question(
+      id: '16',
+      title: 'Which of the following is a relational database management system (RDBMS)?',
+      options: {'MongoDB': false, 'PostgreSQL': true, 'Redis': false, ' Cassandra': false},
+    ),
+    Question(
+      id: '17',
+      title: 'What is the purpose of a compiler in programming?',
+      options: {'To debug the program': false, 'To convert high-level language to machine code': true, 'To execute the program': false, 'To design the user interface': false},
+    ),
+    Question(
+      id: '18',
+      title: 'What does OOP stand for in programming?',
+      options: {' Ordinary Operating Procedure': false, 'Object-Oriented Programming': true, 'Open Object Programming': false, 'Overarching Object Protocol': false},
+    ), Question(
+      id: '19',
+      title: 'Which sorting algorithm has the worst-case time complexity of O(n^2)?',
+      options: {'Quick Sort': false, ' Merge Sort': true, ' Bubble Sort': false, 'Insertion Sort': false},
+    ), Question(
+      id: '20',
+      title: 'In networking, what does TCP stand for?"?',
+      options: {' Transfer Control Protocol': false, 'Transmission Control Protocol': true, 'Transfer Connection Protocol': false, ' Transmission Connection Protocol': false},
+    ),
+
+
+
   ];
   int index = 0;
   int score = 0;
@@ -155,8 +197,12 @@ class _HomeScreenState extends State<HomeScreen> {
               nextQuestion: nextQuestion,
             ),
           ),
-
-          
+          const SizedBox(height: 16.0),
+          FloatingActionButton.extended(
+            onPressed: resetExam,
+            label: const Text('Reset Exam'),
+            icon: const Icon(Icons.refresh),
+          ),
         ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
